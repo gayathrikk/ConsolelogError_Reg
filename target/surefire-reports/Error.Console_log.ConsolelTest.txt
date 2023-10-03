@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: Error.Console_log.ConsolelTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 58.529 s <<< FAILURE! - in Error.Console_log.ConsolelTest
+Error.Console_log.ConsolelTest.Homepage_Consolelog  Time elapsed: 1.434 s  <<< FAILURE!
+java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [1]
+	at Error.Console_log.ConsolelTest.Consolelog(ConsolelTest.java:147)
+	at Error.Console_log.ConsolelTest.Homepage_Consolelog(ConsolelTest.java:36)
+
+Error.Console_log.ConsolelTest.login_Consolelog  Time elapsed: 21.687 s  <<< FAILURE!
+java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [6]
+	at Error.Console_log.ConsolelTest.Consolelog(ConsolelTest.java:147)
+	at Error.Console_log.ConsolelTest.login_Consolelog(ConsolelTest.java:63)
+
+Error.Console_log.ConsolelTest.serieset_Consolelog  Time elapsed: 10.114 s  <<< FAILURE!
+java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [1]
+	at Error.Console_log.ConsolelTest.Consolelog(ConsolelTest.java:147)
+	at Error.Console_log.ConsolelTest.serieset_Consolelog(ConsolelTest.java:80)
+
+Error.Console_log.ConsolelTest.Atlas_Consolelog  Time elapsed: 4.452 s  <<< FAILURE!
+java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [5]
+	at Error.Console_log.ConsolelTest.Consolelog(ConsolelTest.java:147)
+	at Error.Console_log.ConsolelTest.Atlas_Consolelog(ConsolelTest.java:102)
+
+Error.Console_log.ConsolelTest.Registration_Consolelog  Time elapsed: 8.586 s  <<< FAILURE!
+java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [9]
+	at Error.Console_log.ConsolelTest.Consolelog(ConsolelTest.java:147)
+	at Error.Console_log.ConsolelTest.Registration_Consolelog(ConsolelTest.java:113)
+
+Error.Console_log.ConsolelTest.Cellannotation_Consolelog  Time elapsed: 6.017 s  <<< FAILURE!
+java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [5]
+	at Error.Console_log.ConsolelTest.Consolelog(ConsolelTest.java:147)
+	at Error.Console_log.ConsolelTest.Cellannotation_Consolelog(ConsolelTest.java:124)
+
