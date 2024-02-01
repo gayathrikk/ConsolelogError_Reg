@@ -18,12 +18,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class ConsolelTest {
-
+public class HD_consolelog {
+	
 	 private RemoteWebDriver driver;
 		
 		@BeforeTest
@@ -66,7 +66,7 @@ public class ConsolelTest {
 	        } else {
 	            System.out.println("Login button is not clicked.");
 	        }
-	       
+	        
 		  wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 		  Set<String> allWindows = driver.getWindowHandles();
 	        for (String window : allWindows) {
@@ -108,11 +108,11 @@ public class ConsolelTest {
 	        } else {
 	            System.out.println("Next button 2 is not clicked.");
 	        }
-	        Consolelog();
+	        
 	
 	        driver.switchTo().window(parentWindow);
 	        System.out.println("Login successfully");
-	        
+	        checkConsoleLog();
 	        
 	        System.out.println("************************Login validation done***********************");
 		        
@@ -152,7 +152,7 @@ public class ConsolelTest {
 	 		} catch (Exception e) {
 	 		    System.out.println(" FTB-40 not clicked: " + e.getMessage());
 	 		}
-	    	
+	    	 
 	    	 
 	    	 try {
 	  		    WebElement section = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='883'])[1]")));
@@ -163,7 +163,7 @@ public class ConsolelTest {
 	  		    System.out.println("section not clicked: " + e.getMessage());
 	  		}
 	    	 
-	    	 Consolelog();
+	    	 checkConsoleLog();
 	    	 System.out.println("************************************Series set validation done********************************");
 	
 	    	 
@@ -216,7 +216,7 @@ public class ConsolelTest {
 //		     actions.keyDown(Keys.CONTROL).sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT)).keyUp(Keys.CONTROL).build().perform(); //zoomout
 		     
 		     driver.findElement(By.xpath("//a[@title='Hide Grid']")).click();
-		     Consolelog();
+		     checkConsoleLog();
 		     System.out.println("**********************************Grid and zoom validation done***********************************");
 		     Thread.sleep(1000);
 		        
@@ -244,7 +244,7 @@ public class ConsolelTest {
 		        Thread.sleep(5000);
 		        driver.findElement(By.xpath("//a[@title='Stop Measure']")).click();
 		        driver.findElement(By.xpath("//a[@title='Delete Measure']")).click();
-		        Consolelog();
+		        checkConsoleLog();
 		        Thread.sleep(1000);
 		        System.out.println("**********************************Measure validation done******************************************");
 		        
@@ -266,7 +266,7 @@ public class ConsolelTest {
 		        driver.findElement(By.xpath("//button[text()=' Download ']")).click();
 		        Thread.sleep(2000);
 		        driver.findElement(By.xpath("//div[text()='Download Full Image']//following::button[3]")).click();
-		        Consolelog();
+		        checkConsoleLog();
 		        Thread.sleep(5000);
 	    }
 		@Test(priority=6)
@@ -304,7 +304,7 @@ public class ConsolelTest {
 	    	    actions4.moveByOffset(50, 0).release().build().perform();
 	    	    Thread.sleep(4000);
 	    	    driver.findElement(By.xpath("(//button[text()=' Default '])[1]")).click();
-	    	    Consolelog();
+	    	    checkConsoleLog();
 	    	    Thread.sleep(3000);
 	    	    System.out.println("******************************RGB validation done*******************************");
 	    }
@@ -328,30 +328,27 @@ public class ConsolelTest {
 	    	 driver.findElement(By.xpath("//a[@title='Hide Grid']")).click();
 	    	 Thread.sleep(2000);
 	    	 driver.findElement(By.xpath("//a[@title='back']")).click();
-	    	 Consolelog();
+	    	 checkConsoleLog();
 	    	 System.out.println("*******************************Opacity window validation done*********************************");
 	    }
-    
-    @AfterTest
-    public void close() throws Exception {
-        driver.quit();
-    }
-    
-    private  void Consolelog()
-    {
+		
+	    private void checkConsoleLog() {
+	        LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
+	        List<LogEntry> logs = entry.filter(Level.SEVERE); 
 
-        LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
-        List<LogEntry> logs = entry.filter(Level.SEVERE); 
+	        int severeLogCount = logs.size(); 
+	        System.out.println("Number of SEVERE-level logs: " + severeLogCount);
 
-        int severeLogCount = logs.size(); 
-        System.out.println("Number of SEVERE-level logs: " + severeLogCount);
+	        for (LogEntry log : logs) {																			
+	            System.out.println("Level is : \n" + log.getLevel());
+	            System.out.println("Message is : \n" + log.getMessage());
+	        }
+	        
+	        Assert.assertEquals(severeLogCount, 0, "SEVERE logs were found in the console.");
+	    }
+		@AfterClass
+	    public void tearDown() {
+	        driver.quit();
+	    }
 
-        for (LogEntry log : logs) {																			
-            System.out.println("Level is : \n" + log.getLevel());
-            System.out.println("Message is : \n" + log.getMessage());
-        }
-        
-        Assert.assertEquals(severeLogCount, 0, "SEVERE logs were found in the console.");
-    }
-    
 }

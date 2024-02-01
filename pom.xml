@@ -53,8 +53,7 @@
     <artifactId>monte-screen-recorder</artifactId>
     <version>0.7.7.0</version>
 </dependency>
-
-  </dependencies>
+ </dependencies>
 
   <build>
     <pluginManagement>
@@ -71,7 +70,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.0.0-M5</version>
           <configuration>
-            <test>Error.Console_log.ConsolelTest</test>
+            <test>Error.Console_log.HD_consolelog</test>
           </configuration>
         </plugin>
       </plugins>

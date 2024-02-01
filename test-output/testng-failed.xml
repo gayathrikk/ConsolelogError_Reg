@@ -3,18 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Error.Console_log.ConsolelTest">
+      <class name="Error.Console_log.HD_consolelog">
         <methods>
-          <include name="Atlas_Consolelog"/>
-          <include name="serieset_Consolelog"/>
-          <include name="login_Consolelog"/>
-          <include name="Homepage_Consolelog"/>
-          <include name="Registration_Consolelog"/>
-          <include name="Cellannotation_Consolelog"/>
-          <include name="close"/>
+          <include name="RGB"/>
+          <include name="login"/>
+          <include name="tearDown"/>
           <include name="setup"/>
+          <include name="series_set"/>
         </methods>
-      </class> <!-- Error.Console_log.ConsolelTest -->
+      </class> <!-- Error.Console_log.HD_consolelog -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
