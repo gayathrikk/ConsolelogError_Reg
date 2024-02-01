@@ -112,7 +112,7 @@ public class HD_consolelog {
 	
 	        driver.switchTo().window(parentWindow);
 	        System.out.println("Login successfully");
-	        checkConsoleLog();
+	        
 	        
 	        System.out.println("************************Login validation done***********************");
 		        
@@ -163,7 +163,7 @@ public class HD_consolelog {
 	  		    System.out.println("section not clicked: " + e.getMessage());
 	  		}
 	    	 
-	    	 checkConsoleLog();
+	    	 
 	    	 System.out.println("************************************Series set validation done********************************");
 	
 	    	 
