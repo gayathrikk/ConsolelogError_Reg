@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Error.Console_log.HD_consolelog">
+      <class name="Error.Console_log.Atlas_consolelog">
         <methods>
-          <include name="RGB"/>
-          <include name="login"/>
-          <include name="tearDown"/>
+          <include name="contributor"/>
+          <include name="atlaseditor"/>
+          <include name="close"/>
           <include name="setup"/>
-          <include name="series_set"/>
         </methods>
-      </class> <!-- Error.Console_log.HD_consolelog -->
+      </class> <!-- Error.Console_log.Atlas_consolelog -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

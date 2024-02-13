@@ -109,10 +109,9 @@ public class HD_consolelog {
 	            System.out.println("Next button 2 is not clicked.");
 	        }
 	        
-	
+	       
 	        driver.switchTo().window(parentWindow);
 	        System.out.println("Login successfully");
-	        
 	        
 	        System.out.println("************************Login validation done***********************");
 		        
@@ -268,6 +267,7 @@ public class HD_consolelog {
 		        driver.findElement(By.xpath("//div[text()='Download Full Image']//following::button[3]")).click();
 		        checkConsoleLog();
 		        Thread.sleep(5000);
+		        System.out.println("**********************************Download validation done******************************************");
 	    }
 		@Test(priority=6)
 	    public void RGB() throws InterruptedException {
@@ -343,6 +343,7 @@ public class HD_consolelog {
 	            System.out.println("Level is : \n" + log.getLevel());
 	            System.out.println("Message is : \n" + log.getMessage());
 	        }
+	        
 	        
 	        Assert.assertEquals(severeLogCount, 0, "SEVERE logs were found in the console.");
 	    }
