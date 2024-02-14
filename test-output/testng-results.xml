@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-13T17:29:24 IST" name="Default suite" finished-at="2024-02-13T17:31:18 IST" duration-ms="114163">
+  <suite started-at="2024-02-14T10:35:58 IST" name="Default suite" finished-at="2024-02-14T10:38:28 IST" duration-ms="150215">
     <groups>
     </groups>
-    <test started-at="2024-02-13T17:29:24 IST" name="Default test" finished-at="2024-02-13T17:31:18 IST" duration-ms="114163">
-      <class name="Error.Console_log.Cellannotation_consolelog">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:29:24 IST" name="setup" finished-at="2024-02-13T17:29:25 IST" duration-ms="777" status="PASS">
+    <test started-at="2024-02-14T10:35:58 IST" name="Default test" finished-at="2024-02-14T10:38:28 IST" duration-ms="150215">
+      <class name="Error.Console_log.Reg_consolelog">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Error.Console_log.Reg_consolelog@6bd61f98]" started-at="2024-02-14T10:35:58 IST" name="setup" finished-at="2024-02-14T10:36:00 IST" duration-ms="1734" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:1, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:29:25 IST" name="login" finished-at="2024-02-13T17:29:37 IST" duration-ms="11740" status="PASS">
+        <test-method signature="Login()[pri:1, instance:Error.Console_log.Reg_consolelog@6bd61f98]" started-at="2024-02-14T10:36:00 IST" name="Login" finished-at="2024-02-14T10:36:25 IST" duration-ms="25030" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="series_set()[pri:2, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:29:37 IST" name="series_set" finished-at="2024-02-13T17:29:53 IST" duration-ms="15946" status="PASS">
+        </test-method> <!-- Login -->
+        <test-method signature="table()[pri:2, instance:Error.Console_log.Reg_consolelog@6bd61f98]" started-at="2024-02-14T10:36:25 IST" name="table" finished-at="2024-02-14T10:36:27 IST" duration-ms="2172" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- series_set -->
-        <test-method signature="cellannotation()[pri:3, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:29:53 IST" name="cellannotation" finished-at="2024-02-13T17:29:55 IST" duration-ms="2442" status="FAIL">
+        </test-method> <!-- table -->
+        <test-method signature="Rotation()[pri:3, instance:Error.Console_log.Reg_consolelog@6bd61f98]" started-at="2024-02-14T10:36:27 IST" name="Rotation" finished-at="2024-02-14T10:37:13 IST" duration-ms="45942" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[SEVERE logs were found in the console. expected [0] but found [9]]]>
+              <![CDATA[SEVERE logs were found in the console. expected [0] but found [7]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [9]
+              <![CDATA[java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [7]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:1419)
 at org.testng.Assert.assertEquals(Assert.java:1383)
-at Error.Console_log.Cellannotation_consolelog.checkConsoleLog(Cellannotation_consolelog.java:326)
-at Error.Console_log.Cellannotation_consolelog.cellannotation(Cellannotation_consolelog.java:185)
+at Error.Console_log.Reg_consolelog.checkConsoleLog(Reg_consolelog.java:325)
+at Error.Console_log.Reg_consolelog.Rotation(Reg_consolelog.java:205)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -67,36 +67,61 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cellannotation -->
-        <test-method signature="Tileloading()[pri:4, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:29:55 IST" name="Tileloading" finished-at="2024-02-13T17:30:02 IST" duration-ms="7048" status="PASS">
+        </test-method> <!-- Rotation -->
+        <test-method signature="Retrive()[pri:4, instance:Error.Console_log.Reg_consolelog@6bd61f98]" started-at="2024-02-14T10:37:13 IST" name="Retrive" finished-at="2024-02-14T10:38:28 IST" duration-ms="75170" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[SEVERE logs were found in the console. expected [0] but found [1]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: SEVERE logs were found in the console. expected [0] but found [1]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at Error.Console_log.Reg_consolelog.checkConsoleLog(Reg_consolelog.java:325)
+at Error.Console_log.Reg_consolelog.Retrive(Reg_consolelog.java:310)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Tileloading -->
-        <test-method signature="centroidDetection()[pri:5, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:30:02 IST" name="centroidDetection" finished-at="2024-02-13T17:30:18 IST" duration-ms="15987" status="PASS">
+        </test-method> <!-- Retrive -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Error.Console_log.Reg_consolelog@6bd61f98]" started-at="2024-02-14T10:38:28 IST" name="tearDown" finished-at="2024-02-14T10:38:28 IST" duration-ms="134" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- centroidDetection -->
-        <test-method signature="celldetection()[pri:6, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:30:18 IST" name="celldetection" finished-at="2024-02-13T17:30:34 IST" duration-ms="16040" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- celldetection -->
-        <test-method signature="Rabies()[pri:7, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:30:34 IST" name="Rabies" finished-at="2024-02-13T17:30:50 IST" duration-ms="16083" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Rabies -->
-        <test-method signature="Annotation()[pri:8, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:30:50 IST" name="Annotation" finished-at="2024-02-13T17:31:02 IST" duration-ms="11938" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Annotation -->
-        <test-method signature="save()[pri:9, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:31:02 IST" name="save" finished-at="2024-02-13T17:31:18 IST" duration-ms="15983" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- save -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:Error.Console_log.Cellannotation_consolelog@52b1beb6]" started-at="2024-02-13T17:31:18 IST" name="afterTest" finished-at="2024-02-13T17:31:18 IST" duration-ms="124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- Error.Console_log.Cellannotation_consolelog -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- Error.Console_log.Reg_consolelog -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

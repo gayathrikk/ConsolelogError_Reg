@@ -332,21 +332,30 @@ public class HD_consolelog {
 	    	 System.out.println("*******************************Opacity window validation done*********************************");
 	    }
 		
-	    private void checkConsoleLog() {
-	        LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
-	        List<LogEntry> logs = entry.filter(Level.SEVERE); 
+		  private void clearConsoleLog() {
+		        // Execute JavaScript to clear the console log
+		        driver.executeScript("console.clear();");
+		    }
 
-	        int severeLogCount = logs.size(); 
-	        System.out.println("Number of SEVERE-level logs: " + severeLogCount);
+		    private void checkConsoleLog() {
+		        // Clear console log
+		        clearConsoleLog();
 
-	        for (LogEntry log : logs) {																			
-	            System.out.println("Level is : \n" + log.getLevel());
-	            System.out.println("Message is : \n" + log.getMessage());
-	        }
-	        
-	        
-	        Assert.assertEquals(severeLogCount, 0, "SEVERE logs were found in the console.");
-	    }
+		        // Retrieve console log entries
+		        LogEntries entry = driver.manage().logs().get(LogType.BROWSER);
+		        List<LogEntry> logs = entry.filter(Level.SEVERE); 
+
+		        int severeLogCount = logs.size(); 
+		        System.out.println("Number of SEVERE-level logs: " + severeLogCount);
+
+		        for (LogEntry log : logs) {
+		            System.out.println("Level is : \n" + log.getLevel());
+		            System.out.println("Message is : \n" + log.getMessage());
+		        }
+		        
+		        Assert.assertEquals(severeLogCount, 0, "SEVERE logs were found in the console.");
+		    }
+		    
 		@AfterClass
 	    public void tearDown() {
 	        driver.quit();
