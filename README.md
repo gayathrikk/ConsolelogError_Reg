@@ -2,3 +2,4 @@
 # ConsolelogError_HD
 # ConsolelogError_Atlas
 # ConsoleLogError_Cell
+# ConsolelogError_Reg
